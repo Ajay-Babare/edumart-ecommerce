@@ -195,7 +195,7 @@ Integration Testing: Use Postman or Swagger UI to test API endpoints.
 1. Dockerize the back-end: Create a Dockerfile in the back-end project and build the Docker image.
 2. Dockerize the front-end: Similarly, you can containerize the Angular front-end if needed.
 3. Deploy on Cloud: Use AWS, Google Cloud, or Heroku for scalable production deployment.
-
+---
 ## Contributing
 We welcome contributions to eduMart! Here's how you can contribute:
 
@@ -204,6 +204,6 @@ We welcome contributions to eduMart! Here's how you can contribute:
 3. Make your changes and commit (git commit -m 'Add new feature').
 4. Push your changes to your fork (git push origin feature/your-feature).
 5. Open a pull request with a clear description of your changes.
-
+---
 ## License
 eduMart is licensed under the MIT License. See the LICENSE file for more information.
