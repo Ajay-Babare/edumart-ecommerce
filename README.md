@@ -11,7 +11,7 @@ This repository contains the source code for both the **front-end** (Angular) an
 - [Project Overview](#project-overview)
 - [Tech Stack](#tech-stack)
 - [Key Features](#key-features)
-- [Frontend & Backend Repositories](#frontend-backend-repositories)
+- [Frontend & Backend Repositories](#frontend--backend-repositories)
 - [Installation](#installation)
   - [Front-end Installation](#front-end-installation)
   - [Back-end Installation](#back-end-installation)
