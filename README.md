@@ -108,78 +108,88 @@ You can find the **source code** for both the **frontend** and **backend** of th
    cd eduMart-frontend
 
 2. Install dependencies:
-  npm install
+  `npm install`
 
-3. Configure API URL in src/environments/environment.ts:
-  export const environment = {
+3. Configure API URL in `src/environments/environment.ts`:
+   ```javascript
+   export const environment = {
     production: false,
     apiUrl: 'http://localhost:8080/api'  # Update this to match your backend URL
-  };
-
-4.Start the Angular development server:
-  ng serve
+   };
+  
+4. Start the Angular development server:
+  `ng serve`
 
 5. Access the front-end at:
-   http://localhost:4200/.
-
+   `http://localhost:4200/`.
+---
 ### Back-end Installation
 
 1. Clone the repository:
-  git clone https://github.com/Ajay-Babare/edumart-backend.git
-  cd eduMart-backend
+   ```bash
+   git clone https://github.com/Ajay-Babare/edumart-backend.git
+   cd eduMart-backend
 
 2. Install dependencies and build the project:
-  mvn clean install
+   `mvn clean install`
 
-3. Configure database connection in src/main/resources/application.properties:
-
-  spring.datasource.url=jdbc:mysql://localhost:3306/eduMart
-  spring.datasource.username=
-  spring.datasource.password=
-  spring.jpa.hibernate.ddl-auto=update
-  spring.security.jwt.secret=
-
+3. Configure database connection in `src/main/resources/application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/eduMart
+   spring.datasource.username=root
+   spring.datasource.password=password
+   spring.jpa.hibernate.ddl-auto=update
+   spring.security.jwt.secret=your-jwt-secret
+   ```
 4. Run the Spring Boot application:
-  mvn spring-boot:run
+   ```bash
+   mvn spring-boot:run
+   ```
 
-5. Access the back-end at:
+5. `Access the back-end at:`
    http://localhost:8080/.
-
+---
 ## Running the Application
 ### Running the Front-end
 1. After setting up the front-end (as described above), run:
-  ng serve
-2. Access the app in your browser at http://localhost:4200/.
+   ```bash
+   ng serve
 
+2. Access the app in your browser at:
+   `http://localhost:4200/`.
+---
 ### Running the Back-end
 1. After setting up the back-end (as described above), run:
-  mvn spring-boot:run
-2. Access the back-end at http://localhost:8080/
-   (API documentation available at http://localhost:8080/swagger-ui.html if Swagger is enabled).
+   ```bash
+   mvn spring-boot:run
+  
+2. Access the back-end at `http://localhost:8080/`
 
+---
 ## API Documentation
 The back-end exposes the following API endpoints for communication with the front-end:
 
-### Authentication
-POST /api/auth/register: Register a new user.
-POST /api/auth/login: Log in and get a JWT token.
-### Products (Admin)
-GET /api/products: List all products.
-POST /api/products: Add a new product (Admin only).
-PUT /api/products/{id}: Edit an existing product (Admin only).
-DELETE /api/products/{id}: Delete a product (Admin only).
-### Cart
-GET /api/cart: Get current user's shopping cart.
-POST /api/cart/add: Add a product to the cart.
-DELETE /api/cart/remove/{productId}: Remove a product from the cart.
-### Orders
-GET /api/orders: Get all orders placed by the user.
-POST /api/orders: Place a new order.
-
+#### Authentication
+- **POST /api/auth/register**: Register a new user.
+- **POST /api/auth/login**: Log in and get a JWT token.
+#### Products (Admin)
+- **GET /api/products**: List all products.
+- **POST /api/products**: Add a new product (Admin only).
+- **PUT /api/products/{id}**: Edit an existing product (Admin only).
+- **DELETE /api/products/{id}**: Delete a product (Admin only).
+#### Cart
+- **GET /api/cart**: Get current user's shopping cart.
+- **POST /api/cart/add**: Add a product to the cart.
+- **DELETE /api/cart/remove/{productId}**: Remove a product from the cart.
+#### Orders
+- **GET /api/orders**: Get all orders placed by the user.
+- **POST /api/orders**: Place a new order.
+---
 ## Testing
 Unit Tests: Unit tests are included for both the front-end (using Jasmine/Karma) and back-end (using JUnit).
 Integration Testing: Use Postman or Swagger UI to test API endpoints.
 
+---
 ## Deployment
 ### Dockerization
 1. Dockerize the back-end: Create a Dockerfile in the back-end project and build the Docker image.
